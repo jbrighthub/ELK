@@ -1,0 +1,29 @@
+JSON
+json {
+source => "message"
+}
+
+{"name":"John", "age":25, "car":Ertiga}
+{"name":"Joe", "age":35, "car":"Dzire"}
+{"name":"Snell", "age":25, "car":"Indica", "colour":"Red"}
+
+---------------------------------------------------------------------------------------------
+csv {
+      separator => ","
+      skip_header => "true"
+      columns => ["user_name","age","emp_salary","department_name"]
+  }
+CSV
+name,age,salary,department
+mangesh,30,10000,IT
+ritesh,25,25000, CS
+
+-----------------------------------------------------------------------------
+XML
+
+xml {
+source => "message"
+target => "manish"
+}
+
+<note><to>Tove</to><from>Jani</from><heading>Reminder</heading><body>Don't forget me this weekend!</body></note>
