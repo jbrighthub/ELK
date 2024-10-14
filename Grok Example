@@ -1,0 +1,25 @@
+Jun 15 02:04:59 combo sshd(pam_unix)[20882]: authentication failure; logname=authnitication uid=0 euid=0 tty=NODEVssh ruser= linux_user, rhost=220-135-151-1.hinet-ip.hinet.net  user=root incorrect username and password enterd
+
+%{SYSLOGTIMESTAMP:Time} %{DATA}\[%{NUMBER:pid}\]\: %{DATA:event_type}\; %{WORD}\=%{WORD:logname} uid\=%{NUMBER:uid} euid\=%{NUMBER:uid} tty\=%{WORD:tty} ruser\= %{WORD:ruser}\, rhost\=%{URIHOST:rhost}  user\=%{WORD:user} %{GREEDYDATA:Failure_reason}
+
+------------------------------------------------------------------------------------------------------------
+
+2016-09-13 21:45:10 ::1 GET /webapp2 - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/52.0.2743.116+Safari/537.36 - 500 0 0 5502
+
+%{TIMESTAMP_ISO8601:time} \:\:%{URIQUERY} %{WORD:method_type} \/%{URIHOST:url} \- %{NUMBER:port_number} \- \:\:%{URIQUERY} %{NOTSPACE:browser_name} \- %{NUMBER:response_code}
+
+------------------------------------------------------------------------------------------------------------
+
+192.168.2.20 Manish [28/Jul/2006:10:27:10 -0300] "GET facebook.com HTTP/1.0" 200 3395
+192.168.2.28 Mangesh [28/Jul/2006:10:27:10 -0300] "GET facebook.com HTTP/1.0" 200 4000
+192.168.2.01 Jatin [28/Jul/2006:10:27:10 -0300] "GET whatsapp.com HTTP/1.0" 200 4000
+192.168.2.50 Ganesh [28/Jul/2006:10:27:10 -0300] "GET facebook.com/logout HTTP/1.0" 200 4000
+192.168.2.90 Jay [28/Jul/2006:10:27:10 -0300] "GET facebook.com/login HTTP/1.0" 200 4000
+192.178.2.20 John [28/Jul/2006:10:27:10 -0300] "GET facebook.com HTTP/1.0" 200 4000
+192.158.2.20 Braun [28/Jul/2006:10:27:10 -0300] "GET facebook.com HTTP/1.0" 200 4000
+
+%{IP:Client_IP} %{WORD:UserName} \[%{HTTPDATE:Time}\] \"%{WORD:methodtype} %{URIQUERY:url} %{URIQUERY:Protocol}\" %{NUMBER:StatusCode} %{NUMBER:Response_time}
+
+---------------------------------------------------------------------------------------------------------------
+
+
